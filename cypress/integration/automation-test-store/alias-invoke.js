@@ -14,7 +14,7 @@ describe('Alias and invoke', () => {
     it('Validate that amount of products is the same as amount of cart icons', () => {
         const productAmount = 16
         const productThumbNail = productAmount
-        const cartIconAmount = 15
+        const cartIconAmount = 14
         cy.visit('http://automationteststore.com/')
         // cy.get('a[href*="product/category&path="]').contains('Hair Care').click()
         cy.get('.thumbnail').as('productThumbNail')
