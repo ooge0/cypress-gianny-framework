@@ -6,8 +6,11 @@
   "scripts": {
     "runAllTests-headless": "npx cypress run",
     "runAllTests-headed": "npx cypress run --headed",
+    "runAllTests-headed-chrome": "npx cypress run --headed -browser chrome",
+    "runAllTests-headed-dashboard": "npx cypress run --record --key 03ed10c6-51fa-4ba1-adc0-d83ee272cead",
     "runAllTests-webdriveruni": "npx cypress run --spec cypress/integration/webdriver-uni/*",
     "runAllTests-autoTestStore": "npx cypress run --spec cypress/integration/automation-test-store/* --env configFile=staging",
+    "runAllTests-autoTestStore-dashboard": "npx cypress run --spec cypress/integration/automation-test-store/* --env configFile=staging --record --key 03ed10c6-51fa-4ba1-adc0-d83ee272cead",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-junit-reports": "rm -rf cypress/results/junit/results.xml",
     "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
