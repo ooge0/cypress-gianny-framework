@@ -19,7 +19,8 @@
     "cypress-regression-pack": "npm run delete-results && npm run delete-mochawesome-report && npm run runAllTests-headless && npm run mochawesome-merge",
     "triggerCheckBoxTestForWebDriverUni": "npx cypress run --spec cypress/integration/webdriver-uni/checkboxes.js --env configFile=staging --headed",
     "triggerAllTests-staging": "npx cypress run --env configFile=staging",
-    "triggerAllTests-staging-headed": "npx cypress run --env configFile=staging --headed"
+    "triggerAllTests-staging-headed": "npx cypress run --env configFile=staging --headed",
+    "cypress-multi-browser": "npm run runAllTests-webdriveruni --env configFile=staging -- --browser electron --headed & npm run runAllTests-webdriveruni --env configFile=staging -- --browser edge --headed "
   },
   "author": "rmn",
   "license": "ISC",
