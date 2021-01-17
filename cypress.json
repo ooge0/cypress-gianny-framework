@@ -1,0 +1,25 @@
+{
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 1000,
+  "pageLoadTimeout": 6000,
+  "videoCompression": 10,
+  "viewportWidth": 1080,
+  "viewportHeight": 1920,
+  "projectId": "r7dgx9",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "ignoreTestFiles": "**/other/*",
+  "retries": {
+    "runMode": 1,
+    "openMode": 1
+  },
+  "env": {
+    "webDriverUni_homepage": "http://webdriveruniversity.com",
+    "autoStore_homepage": "http://automationteststore.com/",
+    "first_name": "Joe",
+    "last_name": "Doe"
+  },
+  "baseUrl": "http://webdriveruniversity.com"
+}

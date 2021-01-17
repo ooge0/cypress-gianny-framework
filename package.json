@@ -1,0 +1,37 @@
+{
+  "name": "udemygiannycypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "runAllTests-headless": "npx cypress run",
+    "runAllTests-headed": "npx cypress run --headed",
+    "runAllTests-webdriveruni": "npx cypress run --spec cypress/integration/webdriver-uni/*",
+    "runAllTests-autoTestStore": "npx cypress run --spec cypress/integration/automation-test-store/* --env configFile=staging",
+    "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "delete-junit-reports": "rm -rf cypress/results/junit/results.xml",
+    "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
+    "delete-mochawesome-report": "rm -rf mochawesome-report/* || true",
+    "delete-results": "rm -rf cypress/results/* || true",
+    "cypress-regression-pack": "npm run delete-results && npm run delete-mochawesome-report && npm run runAllTests-headless && npm run mochawesome-merge",
+    "triggerCheckBoxTestForWebDriverUni": "npx cypress run --spec cypress/integration/webdriver-uni/checkboxes.js --env configFile=staging --headed",
+    "triggerAllTests-staging": "npx cypress run --env configFile=staging",
+    "triggerAllTests-staging-headed": "npx cypress run --env configFile=staging --headed"
+  },
+  "author": "rmn",
+  "license": "ISC",
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "cypress": "^6.2.1",
+    "cypress-file-upload": "^4.1.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "cypress-xpath": "^1.6.1",
+    "mocha": "^8.2.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  }
+}

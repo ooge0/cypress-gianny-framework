@@ -1,0 +1,5 @@
+node_modules
+results
+screenshots
+mochawesome-report
+package-lock.json
